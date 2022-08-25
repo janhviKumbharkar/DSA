@@ -1,0 +1,42 @@
+// create or print an array
+#include <iostream>
+using namespace std;
+int main()
+{
+
+    // Already having length of an array
+    int arr[5] = {1, 2, 3, 4, 5};
+    for (int i = 0; i < 5; i++)
+    {
+        cout << arr[i] << " ";
+    }
+
+    // Taking Input from user
+    int n;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+
+    } 
+    for(int i=0;i<n;i++)
+        cout << arr[i] << " ";
+
+    //  Printing array elements
+    // using range based for loop
+
+    for (const int &n : arr)
+    {
+        cout << n << "  ";
+    }
+
+    // Note: In our range-based loop, we have used the code const int &n instead of int n as the range declaration. However, the const int &n is more preferred because:
+
+    // Using int n simply copies the array elements to the variable n during each iteration. This is not memory-efficient.
+
+    // &n, however, uses the memory address of the array elements to access their data without copying them to a new variable. This is memory-efficient.
+    // We are simply printing the array elements, not modifying them. Therefore, we use const so as not to accidentally change the values of the array.
+
+    return 0;
+}
