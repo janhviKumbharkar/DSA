@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int row, column;
+    cin >> row >> column;
+    int a[row][column];
+    // taking input
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < column; j++)
+        {
+            cin >> a[i][j];
+        }
+    }
+    // giving output
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < column; j++)
+        {
+            cout << a[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
